@@ -20,7 +20,8 @@ sudo apt-get install haproxy
 `http://127.0.0.1:8001` and `http://127.0.0.1:8002/`
 
 # Now copy these code in  haproxy.cfg  `sudo nano /etc/haproxy/haproxy.cfg`
-{%highlight code%}
+
+```ruby
 frontend localnodes
     bind 127.0.0.1:9000
     mode http
@@ -41,16 +42,19 @@ listen stats
     stats uri /
     stats hide-version
     stats auth test:test
-{% endhighlight%}
+```
 
 
 # Now restart HAProxy by
 `sudo service haproxy restart`
 
-# Now open browser and hit `http://127.0.0.1:9000`
+# Now open browser and hit 
+`http://127.0.0.1:9000`
 
 
-# Check the stats page by `http://127.0.0.1:1936`
+# Check the stats page by 
+
+`http://127.0.0.1:1936`
 
 `username: test`
 `password: test`
